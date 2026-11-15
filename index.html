@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kampala Solid Waste Collection and Citizen Engagement Portal</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side" id="side"></aside>
+  <div class="scrim" id="scrim" onclick="toggleSide(false)"></div>
+  <div class="content">
+    <header class="top" id="top"></header>
+    <main id="main"></main>
+    <footer class="foot">
+      <div>© Kampala Solid Waste Collection and Citizen Engagement Portal</div>
+      <div>E-mail: <a href="mailto:{{ cfg.contact.email }}">{{ cfg.contact.email }}</a> &nbsp;|&nbsp; Phone: <a href="tel:{{ cfg.contact.phone }}">{{ cfg.contact.phone }}</a></div>
+    </footer>
+  </div>
+</div>
+<script>const CFG = {{ cfg|tojson }};</script>
+<script src="/app.js"></script>
+</body>
+</html>
